@@ -6,8 +6,9 @@
 ```bash
 # 安装 vue-cli 3.0
 npm install -g @vue/cli
-
-# 根据远程 preset 创建项目
+# 本地调试
+vue create --preset ./ my-project
+# 远端调试 根据远程 preset 创建项目
 vue create --preset grasilife/vue-preset my-project
 # or
 vue create --preset direct:https://github.com/grasilife/vue-preset.git my-project --clone

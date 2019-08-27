@@ -1,7 +1,7 @@
 /**
  *
- * @authors liwb (you@example.org)
- * @date    2019-04-29 09:31
+ *@authors guoqiang.fu (434543162@qq.com)
+ * @date    2019/8/27 上午10:43
  * @version $ IIFE
  */
 module.exports = [
