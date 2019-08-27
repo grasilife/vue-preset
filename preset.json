@@ -9,13 +9,12 @@
   "plugins": {
     "@vue/cli-plugin-babel": {},
     "@vue/cli-plugin-e2e-cypress": {},
-    "@vue/cli-plugin-eslint": {},
+    "@vue/cli-plugin-eslint": {
+      "config": "prettier",
+      "lintOn": ["save", "commit"]
+    },
     "@vue/cli-plugin-pwa": {},
     "@vue/cli-plugin-unit-jest": {},
-    "@vue/eslint-config-prettier": {},
-    "lint-staged": {},
-    "vue-cli-plugin-qrcode": {
-      "version": "*"
-    }
+    "vue-cli-plugin-qrcode": {}
   }
 }
