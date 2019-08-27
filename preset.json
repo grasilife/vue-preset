@@ -3,11 +3,17 @@
   "packageManager": "yarn",
   "useTaobaoRegistry": true,
   "cssPreprocessor": "less",
-  "router": false,
-  "vuex": false,
-  "routerHistoryMode": false,
+  "router": true,
+  "vuex": true,
+  "routerHistoryMode": true,
   "plugins": {
     "@vue/cli-plugin-babel": {},
+    "@vue/cli-plugin-e2e-cypress": {},
+    "@vue/cli-plugin-eslint": {},
+    "@vue/cli-plugin-pwa": {},
+    "@vue/cli-plugin-unit-jest": {},
+    "@vue/eslint-config-prettier": {},
+    "lint-staged": {},
     "vue-cli-plugin-qrcode": {
       "version": "*"
     }
