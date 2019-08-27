@@ -1,0 +1,48 @@
+{
+  "name": "gntd-vue-preset",
+  "description": "结合 vue-cli3 的 preset 搭建基于 git repo 的前端项目模板",
+  "version": "0.0.3",
+  "private": false,
+  "keywords": [
+    "vue-cli3",
+    "preset"
+  ],
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  },
+  "author": "guoqiang.fu",
+  "license": "MIT",
+  "main": "./generator/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash ./docs/deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grasilife/vue-preset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grasilife/vue-preset/issues"
+  },
+  "homepage": "https://github.com/grasilife/vue-preset/blob/master/README.md",
+  "dependencies": {
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vuepress/plugin-pwa": "^1.0.3",
+    "@vuepress/theme-vue": "^1.0.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.2.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "lint-staged": "^9.2.4",
+    "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "vuepress": "^1.0.3"
+  }
+}
