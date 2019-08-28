@@ -16,5 +16,6 @@
     "@vue/cli-plugin-pwa": {},
     "@vue/cli-plugin-unit-jest": {},
     "vue-cli-plugin-qrcode": {}
-  }
+  },
+  "configs": {}
 }
