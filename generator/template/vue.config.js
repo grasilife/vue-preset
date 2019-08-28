@@ -103,6 +103,7 @@ module.exports = {
         "@mixins": resolve("src/mixins"),
         "@filters": resolve("src/filters"),
         "@store": resolve("src/store"),
+        "@routes": resolve("src/routes"),
         "@views": resolve("src/views"),
 
         // 文件别名

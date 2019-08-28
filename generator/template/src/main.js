@@ -3,6 +3,8 @@ import 'lib-flexible';
 <%_ } _%>
 import Vue from 'vue';
 import App from './App.vue';
+import store from "./store/index";
+import router from './router'
 import './components/global';
 import './common/errorPlugin';
 import './icons';
@@ -22,7 +24,7 @@ Vue.config.productionTip = process.env.NODE_ENV === 'production';
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  // use Runtime-only
-  // https://vuejs.org/v2/guide/installation.html
+  store,
+  router,
   render: (h) => h(App)
-});
+})
