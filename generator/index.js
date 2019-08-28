@@ -32,8 +32,6 @@ module.exports = (api, options, rootOptions) => {
       axios: "^0.19.0",
       magicless: "*",
       "normalize.css": "^8.0.1",
-      vue: "^2.6.10",
-      "vue-router": "^3.0.1",
       "vue-svgicon": "^3.2.2"
     },
     devDependencies: {
@@ -44,15 +42,18 @@ module.exports = (api, options, rootOptions) => {
       //webpack构建时压缩
       "compression-webpack-plugin": "^3.0.0",
       plop: "^2.3.0",
+      //编译进度条插件
       "progress-bar-webpack-plugin": "^1.12.1",
+      //webpack优化插件
       "script-ext-html-webpack-plugin": "^2.1.3",
+      //全局使用less 、sass
       "style-resources-loader": "^1.2.1",
+      // stylelint
       stylelint: "^10.1.0",
       "stylelint-config-standard": "^18.2.0",
       "stylelint-order": "^3.0.0",
-      tasksfile: "^5.1.0",
-      "vue-template-compiler": "^2.6.10",
-      "webstorm-disable-index": "^1.2.0"
+      // 通过YAML使用bash命令支持并行化npm的任务
+      tasksfile: "^5.1.0"
     }
   });
 
@@ -72,6 +73,7 @@ module.exports = (api, options, rootOptions) => {
         "lib-flexible": "^0.3.2"
       },
       devDependencies: {
+        //postcss-pxtorem是PostCSS的插件，用于将像素单元生成rem单位
         "postcss-pxtorem": "^4.0.1"
       },
       postcss: {

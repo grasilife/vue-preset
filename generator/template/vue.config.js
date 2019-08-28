@@ -13,7 +13,7 @@ const isProd = () => {
   return process.env.NODE_ENV === "production";
 };
 
-//额外的配置
+//额外的配置,配置全局less
 function addStyleResource(rule) {
   rule
     .use("style-resource")
