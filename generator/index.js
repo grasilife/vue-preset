@@ -1,6 +1,9 @@
 module.exports = (api, options, rootOptions) => {
   const utils = require("./utils")(api);
   // 命令
+  // api.extendPackage : 负责给初始化项目中的 package.json 添加额外依赖并安装；
+  // api.render : 负责将模板项目中提前定义好的目录和文件拷贝到初始化的项目中；
+  // api.postProcessFiles : 负责具体处理模板项目中的文件，
   api.extendPackage({
     scripts: {
       serve: "vue-cli-service serve",
@@ -34,14 +37,12 @@ module.exports = (api, options, rootOptions) => {
       "vue-svgicon": "^3.2.2"
     },
     devDependencies: {
-      "@ascendancyy/vue-cli-plugin-stylelint": "^1.1.2",
-      "@liwb/vue-router-invoke-webpack-plugin": "^0.3.2",
-      "add-asset-html-webpack-plugin": "^3.1.3",
+      //archiver解压缩
       archiver: "^3.0.0",
+      //终端字符串样式
       chalk: "^2.4.1",
+      //webpack构建时压缩
       "compression-webpack-plugin": "^3.0.0",
-      eslint: "^5.8.0",
-      "eslint-plugin-vue": "^5.0.0",
       plop: "^2.3.0",
       "progress-bar-webpack-plugin": "^1.12.1",
       "script-ext-html-webpack-plugin": "^2.1.3",
