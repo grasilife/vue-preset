@@ -1,13 +1,13 @@
-const viewGenerator = require('./plop-templates/view/prompt');
-const componentGenerator = require('./plop-templates/component/prompt');
+const viewGenerator = require("./plop-templates/view/prompt");
+const componentGenerator = require("./plop-templates/component/prompt");
 
-module.exports = function (plop) {
-  plop.setHelper('formatClassPrefix', function (templateType) {
-    if (templateType === 'view') {
-      return 'page';
+module.exports = function(plop) {
+  plop.setHelper("formatClassPrefix", function(templateType) {
+    if (templateType === "view") {
+      return "page";
     }
-    return 'comp';
+    return "comp";
   });
-  plop.setGenerator('view', viewGenerator);
-  plop.setGenerator('component', componentGenerator);
+  plop.setGenerator("view", viewGenerator);
+  plop.setGenerator("component", componentGenerator);
 };

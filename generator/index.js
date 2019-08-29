@@ -41,6 +41,7 @@ module.exports = (api, options, rootOptions) => {
       chalk: "^2.4.1",
       //webpack构建时压缩
       "compression-webpack-plugin": "^3.0.0",
+      //类似于umi的区块
       plop: "^2.3.0",
       //编译进度条插件
       "progress-bar-webpack-plugin": "^1.12.1",
