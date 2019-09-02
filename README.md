@@ -23,6 +23,6 @@ cd my-project && yarn run serve
 # 本地预览
 npm run docs:dev
 
-# 构建部署版本部署
+# 构建部署版本部署:
 npm run docs:build
 ```
