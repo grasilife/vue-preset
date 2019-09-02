@@ -31,7 +31,7 @@ after_script:
 notifications:
   email:
     recipients:
-      - "${email}"
+      - "${EMAIL}"
     on_success: always
     on_failure: always
 
