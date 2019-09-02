@@ -1,0 +1,44 @@
+# 指定构建脚本执行环境为nodejs
+language: node_js
+# nodejs版本
+node_js: stable
+# Cache dir config
+# 缓存设置的文件或者目录
+cache:
+  directories:
+    - node_modules
+#sudo权限
+sudo: required
+# Install scripts
+# 构建前下载依赖
+install:
+  - npm install
+# script: # 构建主要要执行的脚本
+script: npm run docs:build
+# After_script
+# 构建结束要执行的脚本
+#--force 就能强制覆盖远程仓库
+#--quiet :创建过程中只输出警告或者错误级别的信息
+after_script:
+  - cd ./docs/.vuepress/dist
+  - git init
+  - git config user.name ${user}
+  - git config user.email ${email}
+  - git add .
+  - git commit -m "Update blog"
+  - git push --force --quiet "https://${github-token}@${GH_REF}" master:gh-pages
+
+notifications:
+  email:
+    recipients:
+      - "${email}"
+    on_success: always
+    on_failure: always
+
+env:
+  global:
+    - GH_REF=github.com/grasilife/vue-preset.git
+      #指定分支，只有指定的分支提交时才会运行脚本
+branches:
+  only:
+    - master
