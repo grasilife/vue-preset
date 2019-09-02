@@ -31,7 +31,7 @@ after_script:
 notifications:
   email:
     recipients:
-      - "${EMAIL}"
+      - 434543162@qq.com
     on_success: always
     on_failure: always
 
