@@ -32,7 +32,8 @@ after_script:
 notifications:
   email:
     recipients:
-      - $EMAIL
+      #不能使用环境变量,bug
+      - 434543162@qq.com
     on_success: always
     on_failure: always
 
