@@ -1,5 +1,4 @@
 import axios from "axios";
-import store from "@/store";
 import { getToken } from "./token";
 import codeMessage from "./codeMessage";
 import config from "./config";
@@ -8,7 +7,7 @@ const service = axios.create(config);
 // token封装
 service.interceptors.request.use(
   config => {
-    if (store.getters.token) {
+    if (getToken()) {
       config.headers["X-Token"] = getToken();
     }
     return config;
