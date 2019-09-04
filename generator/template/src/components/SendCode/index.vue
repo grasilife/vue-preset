@@ -71,36 +71,3 @@ export default {
   }
 };
 </script>
-
-<!--
-用法：
-
-html:
-
-<send-code class="btn btn-default" v-model="start" @click.native="sendCode"></send-code>
-
-or
-
-<send-code class="btn btn-default" v-model="start" @click.native="sendCode"></send-code>
-
-<send-code class="btn btn-default" v-model="start" second="15" initText="点我啊，你点我啊"
-            runText="在{%s}秒后你就可以重新获取啦"
-            resetText="你可以重新获取验证码啦"
-            @click.native="sendCode"></send-code>
-
-js:
- export default {
-        data() {
-            return {
-                start: false
-            }
-        },
-        methods: {
-            sendCode() {
-                setTimeout(() => {
-                    this.start = true;
-                }, 1000);
-            }
-        }
-    }
--->

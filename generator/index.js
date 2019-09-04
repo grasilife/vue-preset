@@ -120,6 +120,7 @@ module.exports = (api, options, rootOptions) => {
 
   // 公共基础目录和文件
   api.render("./template");
+  // 文件替换把./template/src/main.js拷贝带到./src/main.js
   api.render({
     "./src/main.js": "./template/src/main.js"
   });
