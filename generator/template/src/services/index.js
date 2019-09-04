@@ -1,6 +1,5 @@
 import axios from "axios";
 import store from "@/store";
-import Vue from "vue";
 import { getToken } from "./token";
 import codeMessage from "./codeMessage";
 import config from "./config";

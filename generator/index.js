@@ -30,6 +30,7 @@ module.exports = (api, options, rootOptions) => {
     dependencies: {
       "@liwb/cloud-utils": "*",
       axios: "^0.19.0",
+      "js-cookie": "*",
       magicless: "*",
       "normalize.css": "^8.0.1",
       "vue-svgicon": "^3.2.2"
