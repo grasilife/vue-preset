@@ -3,6 +3,7 @@
 const path = require("path");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const ProgressBarPlugin = require("progress-bar-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const chalk = require("chalk");
 
 const resolve = dir => {
@@ -118,6 +119,25 @@ module.exports = {
   // webpack配置
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   chainWebpack: config => {
+    if (IS_PROD) {
+      //去掉 console.log
+      const plugins = [];
+      plugins.push(
+        new UglifyJsPlugin({
+          uglifyOptions: {
+            compress: {
+              warnings: false,
+              drop_console: true,
+              drop_debugger: false,
+              pure_funcs: ["console.log"] //移除console
+            }
+          },
+          sourceMap: false,
+          parallel: true
+        })
+      );
+      config.plugins = [...config.plugins, ...plugins];
+    }
     // module
     // style-resources-loader
     //如果你想自动化导入文件 (用于颜色、变量、mixin……)，你可以使用 style-resources-loader
