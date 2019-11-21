@@ -119,7 +119,7 @@ module.exports = {
   // webpack配置
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
   chainWebpack: config => {
-    if (IS_PROD) {
+    if (isProd()) {
       //去掉 console.log
       const plugins = [];
       plugins.push(
