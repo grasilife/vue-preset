@@ -8,7 +8,9 @@
   "routerHistoryMode": true,
   "plugins": {
     "@vue/cli-plugin-babel": {},
-    "@vue/cli-plugin-e2e-cypress": {},
+    "@vue/cli-plugin-e2e-cypress": {
+      "prompts": true
+    },
     "@vue/cli-plugin-eslint": {
       "config": "prettier",
       "lintOn": ["save", "commit"]
