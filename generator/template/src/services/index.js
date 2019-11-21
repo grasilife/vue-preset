@@ -2,6 +2,7 @@ import axios from "axios";
 import { getToken } from "./token";
 import codeMessage from "./codeMessage";
 import config from "./config";
+import store from "@/store/index";
 // 创建服务
 const service = axios.create(config);
 // token封装
