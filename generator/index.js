@@ -28,6 +28,7 @@ module.exports = (api, options, rootOptions) => {
   // 安装一些基础公共库
   api.extendPackage({
     dependencies: {
+      vuex: "^3.0.1",
       "@liwb/cloud-utils": "*",
       axios: "^0.19.0",
       "js-cookie": "*",
