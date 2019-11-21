@@ -41,6 +41,7 @@ module.exports = (api, options, rootOptions) => {
       archiver: "^3.0.0",
       //终端字符串样式
       chalk: "^2.4.1",
+      "uglifyjs-webpack-plugin": "^2.2.0",
       //webpack构建时压缩
       "compression-webpack-plugin": "^3.0.0",
       //类似于umi的区块
