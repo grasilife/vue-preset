@@ -90,7 +90,7 @@ module.exports = {
     // css预设器配置项
     loaderOptions: {},
     // 启用 CSS modules for all css / pre-processor files.
-    modules: false
+    requireModuleExtension: false
   },
   configureWebpack: () => ({
     name: "vue-cli3-template",
