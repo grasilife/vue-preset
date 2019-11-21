@@ -1,3 +1,10 @@
+<!--
+ * @Author: 付国强
+ * @Date: 2019-11-21 14:35:48
+ * @LastEditors: 付国强
+ * @LastEditTime: 2019-11-21 15:46:19
+ * @Description: 
+ -->
 <template>
   <div class="page page-hello">
     <div class="page-content">
@@ -5,9 +12,6 @@
       <img src="~@assets/img/logo.png" />
       <h1 v-text="msg"></h1>
       <h2 v-text="message"></h2>
-      <div class="demo">
-        <h3>hello gntd vue preset</h3>
-      </div>
     </div>
   </div>
 </template>
@@ -27,25 +31,9 @@ export default {
     };
   },
 
-  created() {
-    this.movieComingSoon();
-  },
+  created() {},
 
   methods: {
-    movieComingSoon() {
-      const data = {};
-      this.$services
-        .octocat({
-          method: "get",
-          data
-        })
-        .then(res => {
-          console.log("接口请求成功：" + JSON.stringify(res, null, 2));
-        })
-        .catch(err => {
-          console.log("接口请求异常：" + err);
-        });
-    }
   }
 };
 </script>
